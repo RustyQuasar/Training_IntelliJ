@@ -18,10 +18,6 @@ public class Main extends Application {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("calculator.fxml"));
         Parent root = loader.load();
 
-        //Initializes the controller with all our java code
-        CalculatorController controller = loader.getController();
-        controller.init();
-
         //Actually starts the app with everything
         Scene scene = new Scene(root, 800, 600);
         stage.setScene(scene);

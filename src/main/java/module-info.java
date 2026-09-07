@@ -1,3 +1,4 @@
+//This file needs to be updated with new imports, but is enough for a basic app to compile with
 module training {
     requires javafx.controls;
     requires javafx.fxml;

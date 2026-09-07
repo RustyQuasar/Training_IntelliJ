@@ -44,8 +44,6 @@ jlink {
 
     mergedModule {
         requires 'java.desktop'
-        requires 'java.sql'
-        // add others here if the next build attempt lists more missing requirements
     }
 
     launcher {

@@ -26,11 +26,6 @@ public class CalculatorController {
     private int operatorIndex = -1;
     private boolean continuedEquation = false;
 
-    public void init() {
-        //This is where we put stuff that needs to run before the UI loads, like populating a dropdown
-        //Nothing really needed for a calculator tho
-    }
-
     @FXML
     public void initialize() {
         Button[] buttons = {one, two, three, four, five, six, seven, eight, nine, zero,
@@ -52,10 +47,8 @@ public class CalculatorController {
             double gridHeight = newVal.doubleValue();
             if (gridHeight <= 0) return;
 
-            // Baseline math (1.0 scale at 300px grid height)
             double currentScale = gridHeight / 300.0;
 
-            // Scale all button text nodes
             for (Button btn : buttons) {
                 var btnTextNode = btn.lookup(".text");
                 if (btnTextNode != null) {
@@ -113,7 +106,6 @@ public class CalculatorController {
                     calculate(finalI);
                     secondNumber = "";
                 }
-                //System.out.println("Clicked " + operatorPad[finalI].getText() + " at index " + finalI);
                 updateNumberDisplay();
             });
         }
@@ -140,7 +132,6 @@ public class CalculatorController {
             }
             updateNumberDisplay();
         });
-
 
 
     }
@@ -192,7 +183,6 @@ public class CalculatorController {
                     .text("Number out of bounds")
                     .hideAfter(Duration.seconds(3))
                     .showInformation();
-            //Toast.makeText(this, "Number out of bounds", Toast.LENGTH_SHORT).show();
             return false;
         }
         firstNumber = String.valueOf(result).replaceAll("\\.0$", "");

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<!-- Both an example of a BorderPane, an easy way to split things into top, center and bottom rows, aswell as a parent class -->
+<!-- Parent classes are helpful by controlling imports, used in Java to get screen dimensions, establish the styles file for the fxml file, etc -->
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="training.Sample"
+            fx:id="rootContainer"
+            prefHeight="400.0" prefWidth="600.0"
+            stylesheets="@styles.css"
+            styleClass="main-container">
+    <top></top>
+    <center></center>
+    <bottom></bottom>
+</BorderPane>
+
+<!-- Basic example of a button, nothing fancy -->
+<Button fx:id="button" text="CLICK ME" styleClass="button"/>
+
+<!-- These are the horizontal (HBox) and vertical (VBox) linear layouts of IntelliJ, they behave almost the same as android studio -->
+<!-- Items contained within these can get special properties for softcoding, such as VBox.grow and HBox.grow allowing the element to auto-fill space -->
+<HBox fx:id="hbox"> </HBox>
+<VBox fx:id="vbox"> </VBox>
+
+<!-- Basic example of a label, a common text display -->
+<Label fx:id="label" text="Hello World"/>
+
+<!-- Example of a grid pane -->
+<GridPane fx:id="gridPane" VBox.vgrow="ALWAYS" hgap="15" vgap="15">
+<!-- Defines the % width and height of each row and column respectively -->
+
+    <columnConstraints>
+        <!-- 2 columns, both taking up a respective half -->
+        <ColumnConstraints percentWidth="50"/>
+        <ColumnConstraints percentWidth="50"/>
+    </columnConstraints>
+
+    <rowConstraints>
+        <!-- 3 rows, except the first one takes up half of the space while the rest only take up a quarter -->
+        <RowConstraints percentHeight="50"/>
+        <RowConstraints percentHeight="25"/>
+        <RowConstraints percentHeight="25"/>
+    </rowConstraints>
+
+    <!-- Example of an object placed in a grid, the button is found at fist column, second row (counting starts from 0), and can expand infinitely to maintain the grid shape -->
+    <Button fx:id="gridButton" text="CLICK ME" GridPane.columnIndex="0" GridPane.rowIndex="1"
+            maxWidth="Infinity" maxHeight="Infinity" styleClass="button"/>
+
+</GridPane>

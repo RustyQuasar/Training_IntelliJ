@@ -1,0 +1,17 @@
+/* Main background */
+.main-container {
+    -fx-background-color: #121212;
+}
+
+/* numberDisplay */
+.display-screen {
+    -fx-text-fill: white;
+    -fx-alignment: center-right;
+    -fx-padding: 0 40px 0 0;
+}
+
+/* buttons */
+.calc-button {
+    -fx-text-fill: white;
+    -fx-background-color: #222222;
+}

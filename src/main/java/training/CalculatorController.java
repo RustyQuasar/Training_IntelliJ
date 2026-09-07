@@ -39,7 +39,7 @@ public class CalculatorController {
             btn.setStyle("-fx-font-size: 18px;");
         }
 
-        numberDisplay.styleProperty().bind(Bindings.concat("-fx-font-size: ", numberPad.heightProperty().divide(14), "px;"));
+        numberDisplay.styleProperty().bind(Bindings.concat("-fx-font-size: ", numberPad.heightProperty().divide(5.5), "px;"));
         numberDisplay.setText("0");
         numberDisplay.setTextOverrun(OverrunStyle.LEADING_ELLIPSIS);
 

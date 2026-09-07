@@ -51,8 +51,8 @@ public class Sample {
                 double gridHeight = newVal.doubleValue();
                 if (gridHeight <= 0) return;
 
-                // Baseline math (1.0 scale at 300px grid height)
-                double currentScale = gridHeight / 300.0;
+                // Scale per pixels on screen, I chose 300
+                double currentScale = gridHeight / 300;
 
 
                 var btnTextNode = button.lookup(".text");

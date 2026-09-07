@@ -10,73 +10,73 @@
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="training.CalculatorController"
             fx:id="rootContainer"
-            prefHeight="400.0" prefWidth="600.0"
+            prefHeight="600.0" prefWidth="800.0"
             stylesheets="@styles.css"
             styleClass="main-container">
     <center>
         <VBox>
             <Label fx:id="numberDisplay" text="" VBox.vgrow="SOMETIMES" maxWidth="Infinity" maxHeight="Infinity" styleClass="display-screen" />
-        <GridPane fx:id="numberPad" VBox.vgrow="ALWAYS" hgap="15" vgap="15">
-            <columnConstraints>
-                <ColumnConstraints percentWidth="25" />
-                <ColumnConstraints percentWidth="25" />
-                <ColumnConstraints percentWidth="25" />
-                <ColumnConstraints percentWidth="25" />
-            </columnConstraints>
-            <rowConstraints>
-                <RowConstraints percentHeight="20"/>
-                <RowConstraints percentHeight="20"/>
-                <RowConstraints percentHeight="20"/>
-                <RowConstraints percentHeight="20"/>
-                <RowConstraints percentHeight="20"/>
-            </rowConstraints>
+            <GridPane fx:id="numberPad" VBox.vgrow="ALWAYS" hgap="15" vgap="15">
+                <columnConstraints>
+                    <ColumnConstraints percentWidth="25" />
+                    <ColumnConstraints percentWidth="25" />
+                    <ColumnConstraints percentWidth="25" />
+                    <ColumnConstraints percentWidth="25" />
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints percentHeight="20"/>
+                    <RowConstraints percentHeight="20"/>
+                    <RowConstraints percentHeight="20"/>
+                    <RowConstraints percentHeight="20"/>
+                    <RowConstraints percentHeight="20"/>
+                </rowConstraints>
 
-            <Button fx:id="clear" text="C" GridPane.columnIndex="0" GridPane.rowIndex="0"
-                    maxWidth="Infinity" maxHeight="Infinity" styleClass="calc-button"/>
-            <Button fx:id="backspace" text="DEL" GridPane.columnIndex="1" GridPane.rowIndex="0"
-                    maxWidth="Infinity" maxHeight="Infinity" styleClass="calc-button"/>
-            <Button fx:id="exponent" text="^" GridPane.columnIndex="2" GridPane.rowIndex="0"
-                    maxWidth="Infinity" maxHeight="Infinity" styleClass="calc-button"/>
-            <Button fx:id="divide" text="/" GridPane.columnIndex="3" GridPane.rowIndex="0"
-                    maxWidth="Infinity" maxHeight="Infinity" styleClass="calc-button"/>
+                <Button fx:id="clear" text="C" GridPane.columnIndex="0" GridPane.rowIndex="0"
+                        maxWidth="Infinity" maxHeight="Infinity" styleClass="calc-button"/>
+                <Button fx:id="backspace" text="DEL" GridPane.columnIndex="1" GridPane.rowIndex="0"
+                        maxWidth="Infinity" maxHeight="Infinity" styleClass="calc-button"/>
+                <Button fx:id="exponent" text="^" GridPane.columnIndex="2" GridPane.rowIndex="0"
+                        maxWidth="Infinity" maxHeight="Infinity" styleClass="calc-button"/>
+                <Button fx:id="divide" text="/" GridPane.columnIndex="3" GridPane.rowIndex="0"
+                        maxWidth="Infinity" maxHeight="Infinity" styleClass="calc-button"/>
 
-            <Button fx:id="one" text="1" GridPane.columnIndex="0" GridPane.rowIndex="1"
-                    maxWidth="Infinity" maxHeight="Infinity" styleClass="calc-button"/>
-            <Button fx:id="two" text="2" GridPane.columnIndex="1" GridPane.rowIndex="1"
-                    maxWidth="Infinity" maxHeight="Infinity" styleClass="calc-button"/>
-            <Button fx:id="three" text="3" GridPane.columnIndex="2" GridPane.rowIndex="1"
-                    maxWidth="Infinity" maxHeight="Infinity" styleClass="calc-button"/>
-            <Button fx:id="multiply" text="*" GridPane.columnIndex="3" GridPane.rowIndex="1"
-                    maxWidth="Infinity" maxHeight="Infinity" styleClass="calc-button"/>
+                <Button fx:id="one" text="1" GridPane.columnIndex="0" GridPane.rowIndex="1"
+                        maxWidth="Infinity" maxHeight="Infinity" styleClass="calc-button"/>
+                <Button fx:id="two" text="2" GridPane.columnIndex="1" GridPane.rowIndex="1"
+                        maxWidth="Infinity" maxHeight="Infinity" styleClass="calc-button"/>
+                <Button fx:id="three" text="3" GridPane.columnIndex="2" GridPane.rowIndex="1"
+                        maxWidth="Infinity" maxHeight="Infinity" styleClass="calc-button"/>
+                <Button fx:id="multiply" text="*" GridPane.columnIndex="3" GridPane.rowIndex="1"
+                        maxWidth="Infinity" maxHeight="Infinity" styleClass="calc-button"/>
 
-            <Button fx:id="four" text="4" GridPane.columnIndex="0" GridPane.rowIndex="2"
-                    maxWidth="Infinity" maxHeight="Infinity" styleClass="calc-button"/>
-            <Button fx:id="five" text="5" GridPane.columnIndex="1" GridPane.rowIndex="2"
-                    maxWidth="Infinity" maxHeight="Infinity" styleClass="calc-button"/>
-            <Button fx:id="six" text="6" GridPane.columnIndex="2" GridPane.rowIndex="2"
-                    maxWidth="Infinity" maxHeight="Infinity" styleClass="calc-button"/>
-            <Button fx:id="add" text="+" GridPane.columnIndex="3" GridPane.rowIndex="2"
-                    maxWidth="Infinity" maxHeight="Infinity" styleClass="calc-button"/>
+                <Button fx:id="four" text="4" GridPane.columnIndex="0" GridPane.rowIndex="2"
+                        maxWidth="Infinity" maxHeight="Infinity" styleClass="calc-button"/>
+                <Button fx:id="five" text="5" GridPane.columnIndex="1" GridPane.rowIndex="2"
+                        maxWidth="Infinity" maxHeight="Infinity" styleClass="calc-button"/>
+                <Button fx:id="six" text="6" GridPane.columnIndex="2" GridPane.rowIndex="2"
+                        maxWidth="Infinity" maxHeight="Infinity" styleClass="calc-button"/>
+                <Button fx:id="add" text="+" GridPane.columnIndex="3" GridPane.rowIndex="2"
+                        maxWidth="Infinity" maxHeight="Infinity" styleClass="calc-button"/>
 
-            <Button fx:id="seven" text="7" GridPane.columnIndex="0" GridPane.rowIndex="3"
-                    maxWidth="Infinity" maxHeight="Infinity" styleClass="calc-button"/>
-            <Button fx:id="eight" text="8" GridPane.columnIndex="1" GridPane.rowIndex="3"
-                    maxWidth="Infinity" maxHeight="Infinity" styleClass="calc-button"/>
-            <Button fx:id="nine" text="9" GridPane.columnIndex="2" GridPane.rowIndex="3"
-                    maxWidth="Infinity" maxHeight="Infinity" styleClass="calc-button"/>
-            <Button fx:id="subtract" text="-" GridPane.columnIndex="3" GridPane.rowIndex="3"
-                    maxWidth="Infinity" maxHeight="Infinity" styleClass="calc-button"/>
+                <Button fx:id="seven" text="7" GridPane.columnIndex="0" GridPane.rowIndex="3"
+                        maxWidth="Infinity" maxHeight="Infinity" styleClass="calc-button"/>
+                <Button fx:id="eight" text="8" GridPane.columnIndex="1" GridPane.rowIndex="3"
+                        maxWidth="Infinity" maxHeight="Infinity" styleClass="calc-button"/>
+                <Button fx:id="nine" text="9" GridPane.columnIndex="2" GridPane.rowIndex="3"
+                        maxWidth="Infinity" maxHeight="Infinity" styleClass="calc-button"/>
+                <Button fx:id="subtract" text="-" GridPane.columnIndex="3" GridPane.rowIndex="3"
+                        maxWidth="Infinity" maxHeight="Infinity" styleClass="calc-button"/>
 
-            <Button fx:id="invert" text="+/-" GridPane.columnIndex="0" GridPane.rowIndex="4"
-                    maxWidth="Infinity" maxHeight="Infinity" styleClass="calc-button"/>
-            <Button fx:id="zero" text="0" GridPane.columnIndex="1" GridPane.rowIndex="4"
-                    maxWidth="Infinity" maxHeight="Infinity" styleClass="calc-button"/>
-            <Button fx:id="period" text="." GridPane.columnIndex="2" GridPane.rowIndex="4"
-                    maxWidth="Infinity" maxHeight="Infinity" styleClass="calc-button"/>
-            <Button fx:id="equals" text="=" GridPane.columnIndex="3" GridPane.rowIndex="4"
-                    maxWidth="Infinity" maxHeight="Infinity" styleClass="calc-button"/>
+                <Button fx:id="invert" text="+/-" GridPane.columnIndex="0" GridPane.rowIndex="4"
+                        maxWidth="Infinity" maxHeight="Infinity" styleClass="calc-button"/>
+                <Button fx:id="zero" text="0" GridPane.columnIndex="1" GridPane.rowIndex="4"
+                        maxWidth="Infinity" maxHeight="Infinity" styleClass="calc-button"/>
+                <Button fx:id="period" text="." GridPane.columnIndex="2" GridPane.rowIndex="4"
+                        maxWidth="Infinity" maxHeight="Infinity" styleClass="calc-button"/>
+                <Button fx:id="equals" text="=" GridPane.columnIndex="3" GridPane.rowIndex="4"
+                        maxWidth="Infinity" maxHeight="Infinity" styleClass="calc-button"/>
 
-        </GridPane>
+            </GridPane>
         </VBox>
     </center>
 </BorderPane>

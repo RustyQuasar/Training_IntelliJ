@@ -44,7 +44,7 @@ public class CalculatorController {
             btn.setStyle("-fx-font-size: 18px;");
         }
 
-        numberDisplay.styleProperty().bind(Bindings.concat("-fx-font-size: ", numberPad.heightProperty().divide(14), "px;"));
+        numberDisplay.styleProperty().bind(Bindings.concat("-fx-font-size: ", numberPad.heightProperty().divide(5), "px;"));
         numberDisplay.setText("0");
         numberDisplay.setTextOverrun(OverrunStyle.LEADING_ELLIPSIS);
 
@@ -192,7 +192,6 @@ public class CalculatorController {
                     .text("Number out of bounds")
                     .hideAfter(Duration.seconds(3))
                     .showInformation();
-            //Toast.makeText(this, "Number out of bounds", Toast.LENGTH_SHORT).show();
             return false;
         }
         firstNumber = String.valueOf(result).replaceAll("\\.0$", "");
